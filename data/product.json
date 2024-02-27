@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Dell XPS 15",
+        "description": "Powerful laptop for professionals and gamers.",
+        "price": 19875000,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg28/PV1000/IsignstockContributors/iss_17456_00886.jpg?token=iG-sj49PEFAUHWK5g9Xkpi-zVujhVg4JOJKiQkbQEXs&class=pv60&smss=53&expires=4102358400",
+        "stock": 58,
+        "condition": false,
+        "isLike": 0,
+        "CategoryId": 1,
+        "StoreId": 2
+    },
+    {
+        "name": "Apple MacBook Air",
+        "description": "Lightweight and sleek laptop for everyday use.",
+        "price": 13999000,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg32/PV1000/IsignstockContributors/iss_38663_00066.jpg?token=1-u4zgEzTTZwLUsweS86AjnTRwoOS5aFJazYQTRcaKk&class=pv60&smss=52&expires=4102358400",
+        "stock": 23,
+        "condition": true,
+        "isLike": 0,
+        "CategoryId": 1,
+        "StoreId": 1
+    },
+    {
+        "name": "HP Pavilion Desktop",
+        "description": "Versatile desktop computer for home and office use.",
+        "price": 9799000,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg27/PV1000/ingram/02d64984.jpg?token=GByX_JbFpiZXtEX-vt5ePQbruu1mMWyg_AVLI1KdL6w&class=pv60&smss=53&expires=4102358400",
+        "stock": 79,
+        "condition": true,
+        "isLike": 0,
+        "CategoryId": 2,
+        "StoreId": 3
+    },
+    {
+        "name": "Samsung 55-Inch 4K Smart TV",
+        "description": "High-quality 4K Smart TV for immersive entertainment.",
+        "price": 11199000,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg35/PV1000/IsignstockContributors/iss_20984_00118.jpg?token=e25MI-yL4Xe_FCMeCdkRm4XFd5yoSulMvho6UqnVP4E&class=pv60&smss=53&expires=4102358400",
+        "stock": 64,
+        "condition": false,
+        "isLike": 0,
+        "CategoryId": 5,
+        "StoreId": 2
+    },
+    {
+        "name": "Organic Brown Rice",
+        "description": "Healthy and organic brown rice for your meals.",
+        "price": 89999,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg30/PV1000/IsignstockContributors/iss_23962_00009.jpg?token=-ZBwaGaQ8bX6KtpUBe8GiRPcufOMcaLFHyQGxKz5cDU&class=pv60&smss=52&expires=4102358400",
+        "stock": 7,
+        "condition": true,
+        "isLike": 0,
+        "CategoryId": 10,
+        "StoreId": 1
+    },
+    {
+        "name": "Men's Classic T-Shirt",
+        "description": "Comfortable and stylish cotton t-shirt for men.",
+        "price": 249999,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg28/PV1000/IngimageContributors/ing_47129_13849.jpg?token=MliUsNRaKgciK4uGBleTDE168YpTIqI1E5T2-MHjMts&class=pv60&smss=53&expires=4102358400",
+        "stock": 34,
+        "condition": false,
+        "isLike": 0,
+        "CategoryId": 4,
+        "StoreId": 3
+    },
+    {
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "description": "The first book in the Harry Potter series by J.K. Rowling.",
+        "price": 162999,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg31/PV1000/IsignstockContributors/ist_38120_17871.jpg?token=FOQNJbQnkl97-EzkJwtm7PbCo7q1SAmBzjZkPK3MB-0&class=pv60&smss=52&expires=4102358400",
+        "stock": 91,
+        "condition": true,
+        "isLike": 0,
+        "CategoryId": 6,
+        "StoreId": 1
+    },
+    {
+        "name": "Modern Leather Sofa",
+        "description": "Sleek and modern leather sofa for your living room.",
+        "price": 11199000,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg31/PV1000/IngimageContributors/inh_18981_02424.jpg?token=huX4u0PnZoA43nxhWTB4ocMPq-9L-fNGDr2_S0nI-So&class=pv60&smss=52&expires=4102358400",
+        "stock": 12,
+        "condition": false,
+        "isLike": 0,
+        "CategoryId": 7,
+        "StoreId": 2
+    },
+    {
+        "name": "Toyota Camry Hybrid",
+        "description": "Fuel-efficient hybrid sedan with advanced features.",
+        "price": 391992000,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg27/PV1000/ingram/02a14wyt.jpg?token=a3ofYas-DY-MW9yBZs8ick0oBfRu_meGh3vtOt4N4jU&class=pv60&smss=53&expires=4102358400",
+        "stock": 42,
+        "condition": true,
+        "isLike": 0,
+        "CategoryId": 8,
+        "StoreId": 3
+    },
+    {
+        "name": "Nike Running Shoes",
+        "description": "High-performance running shoes for athletes.",
+        "price": 1259999,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg35/PV1000/IsignstockContributors/iss_19382_00127.jpg?token=vIDBlu_msLWN0k1K4mKEBUyFlnhGpz2AmvtT0FmNFkI&class=pv60&smss=53&expires=4102358400",
+        "stock": 59,
+        "condition": false,
+        "isLike": 0,
+        "CategoryId": 9,
+        "StoreId": 2
+    },
+    {
+        "name": "Organic Face Cream",
+        "description": "Organic face cream for skincare and moisturiziing.",
+        "price": 349999,
+        "imageURL": "https://cdn.stockmediaserver.com/smsimg31/PV1000/IsignstockContributors/ist_27837_01441.jpg?token=u-2HzHBnCsrWhKeVRgxasfV402g3nSB4ceWbtCoWrm8&class=pv60&smss=52&expires=4102358400",
+        "stock": 75,
+        "condition": true,
+        "isLike": 0,
+        "CategoryId": 10,
+        "StoreId": 1
+    }
+]

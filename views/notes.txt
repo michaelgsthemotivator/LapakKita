@@ -1,0 +1,12 @@
+npx sequelize db:create
+npx sequelize model:generate --name Category --attributes name:string
+npx sequelize model:generate --name Product --attributes name:string,description:string,price:integer
+npx sequelize db:migrate
+npx sequelize migration:create --name add-fk-categoryId
+npx sequelize db:migrate
+npx sequelize seed:create --name seeding-table-categories
+npx sequelize db:seed:all
+npx sequelize migration:create --name add-fk-StoreId
+npx sequelize model:generate --name Store --attributes name:string,address:string,email:string,deskripsi:string,dateOpen:date
+npx sequelize migration:create --name add-column-Image
+npx sequelize migration:create --name add-column-product

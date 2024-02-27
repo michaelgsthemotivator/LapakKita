@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="/assets/img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <title>LapakKita</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-light bg-light" style="height: 90px;">
+    <div class="container-fluid" style="justify-content: space-between;">
+      <img src="/assets/img/logolapak.png" alt="" height="50px" style="margin-left: 50px;">
+      <form class="d-flex" method="get">
+        <input class="form-control me-2" type="search" placeholder="Cari di LapakKita" style="width: 700px;" name="search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div style="display: flex; margin-right: 50px;">
+      <img src="/assets/img/zee.jpeg" alt="" height="30px" style="border-radius: 100%; margin-right: 10px;">
+      <p style="margin: auto; font-family: 'Montserrat';font-size: 16px;">Azizi</p>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-4" style="display: flex; flex-flow: wrap;">
+        <img src="<%= result[0].imageURL %>" alt="" style="width: 300px; height: 350px; border-radius: 10%;">
+      </div>
+      <div class="col-4">
+        <p style="font-size: 20px; font-weight: 500;">
+          <%= result[0].name %>
+        </p>
+        <p style="font-size: 24px; font-weight: 900;">
+          <%= currencyFormat(result[0].price) %>
+        </p>
+        <p style="margin-bottom: 0px;"><span style="color: rgb(171, 171, 171);">Kondisi: </span>
+          <%= result[0].newCondition %>
+        </p>
+        <p><span style="color: rgb(171, 171, 171);">Stock: </span>
+          <%= result[0].stock %>
+        </p>
+        <p><span style="color: rgb(171, 171, 171);">Description: </span> <br>
+          <%= result[0].description %>
+        </p>
+        <hr>
+        <div style="display: flex;">
+          <div style="width: fit-content; margin-right: 20px;">
+            <img src="<%= result[0].Store.profilePicture %>" alt="" style="height: 50px; border-radius: 100%;">
+          </div>
+          <div class="col">
+            <p style="font-weight: 600; margin-bottom: 0px;">
+              <%= result[0].Store.name %> Store
+            </p>
+            <p style="font-size: 12px;">⭐️ <%= result[0].Store.newRating()%> <span
+                  style="font-size: 12px; color: rgb(152, 152, 152);">rata-rata ulasan</span></p>
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline-success">Follow</button>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="col-4">
+        <form action="/product/add/<%= result[0].id %>" method="post">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Masukkan Jumlah</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <%= result[0].name %>
+              </h6>
+              <hr>
+              <div style="display: flex; align-items: center;">
+                <input type="number" id="input" oninput="updateOutput()" style="width: 60px; margin-right: 10px;" min="1" max="<%= result[0].stock %>" name="qty" value="1">
+                <p style="margin-top: auto; margin-bottom: auto;">Stock: <span style="font-weight: 600; color: red;">
+                    Sisa <%= result[0].stock %> </span> </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <p>Subtotal</p>
+                <input type="number" name="total" id="output1" hidden>
+                <p style="font-weight: 600;" id="output">
+                  <%= currencyFormat(result[0].price) %>
+                </p>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="alert()" style="width: 90px;">Beli</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <% let price=result[0].price %>
+    <% let priceFormat=currencyFormat() %>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <script>
+            function alert() {
+              Swal.fire({
+                title: 'Sukses Membeli',
+                text: 'Selamat pesanan anda akan segera diproses',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              });
+            }
+
+            function updateOutput() {
+              let newPrice = "<%=price%>";
+              let newPriceFormat = "<%=priceFormat%>";
+
+              let inputElement = document.getElementById('input');
+
+              let outputElement = document.getElementById('output');
+              let outputElement1 = document.getElementById('output1');
+
+              let value = inputElement.value * newPrice
+
+              let newValue = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+              }).format(value);
+
+              outputElement.setAttribute('value', value)
+              outputElement1.setAttribute('value', value)
+              outputElement.textContent = newValue
+            }
+
+
+          </script>
+</body>
+
+</html>
